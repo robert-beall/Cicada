@@ -5,6 +5,12 @@ pipeline {
         stage('build') {
             steps {
                 sh 'node --version'
+                sh 'echo "Building the application..."'
+            }
+        }
+        stage('test') {
+            steps {
+                sh 'echo "Running tests..."'
             }
         }
     }
