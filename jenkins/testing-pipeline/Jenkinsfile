@@ -8,8 +8,7 @@ pipeline {
         }
         stage('Lint') {
             steps {
-                cm 'yarn'
-                cm 'yarn lint'
+                sh 'yarn lint'
             }
         }
     }
