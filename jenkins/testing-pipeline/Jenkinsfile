@@ -6,6 +6,11 @@ pipeline {
                 checkout scm
             }
         }
+        stage('Install Dependencies') {
+            steps {
+                sh 'yarn'
+            }
+        }
         stage('Lint') {
             steps {
                 sh 'yarn lint'
